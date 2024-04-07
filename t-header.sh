@@ -17,7 +17,7 @@ while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
 for i in "${spinner[@]}"
 do
 	tput civis
-	echo -ne "\033[34m\r[*] Downloading..please wait.........\e[33m[\033[32m$i\033[33m]\033[0m   ";
+	echo -ne "\033[34m\r[*] Descargando..espera.........\e[33m[\033[32m$i\033[33m]\033[0m   ";
 	sleep $delay
 	printf "\b\b\b\b\b\b\b\b";
 done
@@ -73,14 +73,14 @@ fi
 }
 # note this is only print 7 charecters
 echo "";
-echo -e "\e[1;34m[*] \e[32minstall packages....\e[0m";
+echo -e "\e[1;34m[*] \e[32mInstalar paquetes....\e[0m";
 echo "";
 (apt update -y && apt upgrade -y) &> /dev/null;
 apt install figlet pv ncurses-utils binutils coreutils wget git zsh termux-api procps gawk termux-tools -y &> /dev/null;
 rubygem_d &> /dev/null
 termux-wake-lock;
 if [ -e $PREFIX/share/figlet/Remo773.flf ]; then
-	echo -e "\e[1;34m[*] \033[32mRemo773.flf figlet font is present\033[0m";
+	echo -e "\e[1;34m[*] \033[32mBeto.flf La fuente figlet está presente\033[0m";
 	sleep 4
 else
 wget https://raw.githubusercontent.com/remo7777/REMO773/master/Remo773.flf &> /dev/null;
@@ -94,7 +94,7 @@ THEADER ()
 {
 clear;
 echo -e "\033[01;32m
-Remo773 (2020)
+Beto (2020)
 		
 	menu
 +---------------------------*/
@@ -145,7 +145,7 @@ echo "";
 #echo -e '\e[0;35m+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\e[00m';
 echo "";
 echo -e "
-\033[0;31m┌─[\033[1;34m$TNAME\033[1;33m@\033[1;36mtermux\033[0;31m]─[\033[0;32m~${PWD/#"$HOME"}\033[0;31m]
+\033[0;31m┌─[\033[1;34m$TNAME\033[1;33m@\033[1;36mMicha\033[0;31m]─[\033[0;32m~${PWD/#"$HOME"}\033[0;31m]
 \033[0;31m└──╼ \e[1;31m❯\e[1;34m❯\e[1;90m❯\033[0m "
 
 tput setaf 3
@@ -216,7 +216,7 @@ exit
 }
 
 clear;
-echo -e "\033[31m$(figlet -f Remo773 "T- Header")\e[0m"
+echo -e "\033[31m$(figlet -f Remo773 "T-Header")\e[0m"
 echo -e "\e[1;32m
 +----------------------------------*/
 Beto : (\e[33m14.4.2021\e[32m)
