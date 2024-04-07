@@ -98,35 +98,35 @@ Remo773 (2020)
 		
 	menu
 +---------------------------*/
-.......Terminal-Header......
+.......Crear-Banner......
 +---------------------------*/
-oh-my-zsh users only....
+ Solo usuarios de oh-my-zsh....
 \033[0m";
 ok=0
 while [ $ok = 0 ];
 do
 	echo ""
 tput setaf 3
-read -p "Pleas enter Name : " PROC
+read -p "Porfavor, el nombre: " PROC
 tput sgr 0
 if [[ ${#PROC} -gt 8 ]]; then
-	echo -e "\e[1;34m[*] \033[32mToo long  characters You have input...\033[0m"
+	echo -e "\e[1;34m[*] \033[32mToo tiene largos caracteres...\033[0m"
 	echo ""
-	echo -e "\033[32mPlz enter less than \033[33m9 \033[32mcharacters Name\033[0m" | pv -qL 10;
+	echo -e "\033[32mPlz Introduzca menos de \033[33m9 \033[32mcharacters Nombre\033[0m" | pv -qL 10;
 	echo ""
 	sleep 4
 	clear
 echo -e "\033[01;32m
-Remo773 (2020)
+Beto (2020)
 
 	menu
 +---------------------------*/
-.......Terminal-Header......
+.......Crear-Banner......
 +---------------------------*/
-oh-my-zsh users only....
+Solo usuarios de oh-my-zsh....
 \033[0m";
 	echo ""
-	echo -e "\e[1;34m \033[32mPlease enter less than 9 characters...\033[0m"
+	echo -e "\e[1;34m \033[32mPor favor, introduzca menos de 9 caracteres...\033[0m"
 	echo ""
 else
 	ok=1
@@ -141,7 +141,7 @@ echo ;
 bash ~/T-Header/.banner.sh ${col} ${TNAME}
 echo "";
 #echo -e '\e[0;35m+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\e[00m';
-#echo -e '\033[1;43;30m### SUBSCRIBE MY YOUTUBE CHANNEL ### \033[0m';
+#echo -e '\033[1;43;30m### Agradeceme luego ### \033[0m';
 #echo -e '\e[0;35m+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\e[00m';
 echo "";
 echo -e "
@@ -149,7 +149,7 @@ echo -e "
 \033[0;31m└──╼ \e[1;31m❯\e[1;34m❯\e[1;90m❯\033[0m "
 
 tput setaf 3
-read -p  "Do you want to setup this ? (y/n) " PROC32
+read -p  "¿Quieres configurar esto? (y/n) " PROC32
 tput sgr 0
 if [[ ${PROC32} == [Y/y] ]]; then
 	if [ -e $HOME/t-header.txt ]; then
@@ -210,7 +210,7 @@ COPY_FILES
 chsh -s zsh;
 source ~/.zshrc;
 else
-	echo -e "\033[32mHope you like my work..\033[0m"
+	echo -e "\033[32mEspero que te guste mi trabajo..\033[0m"
 fi
 exit
 }
@@ -219,7 +219,7 @@ clear;
 echo -e "\033[31m$(figlet -f Remo773 "T- Header")\e[0m"
 echo -e "\e[1;32m
 +----------------------------------*/
-Remo773 : (\e[33m14.4.2021\e[32m)
+Beto : (\e[33m14.4.2021\e[32m)
 
 1. Oh-my-zsh
 2. Zsh-syntax-highlight (\e[33mplugins\e[01;32m)
@@ -229,7 +229,7 @@ Remo773 : (\e[33m14.4.2021\e[32m)
 +----------------------------------*/
 \033[0m";
 tput setaf 3;
-read -p  "Do you want to setup this ? (y/n) " PROC33
+read -p  "¿Quieres configurar esto? (y/n) " PROC33
 
 tput sgr 0
 if [[ ${PROC33} == [Y/y] ]]; then
@@ -255,12 +255,12 @@ if [ -d $HOME/.oh-my-zsh ];
 then
 	ozsh=1
 else
-	echo -e "\e[1;34m[*] \e[32mdownload fail no.2..i ll try again..\e[0m";
+	echo -e "\e[1;34m[*] \e[32mError de descarga no.2..i ll Vuelve a intentarlo..\e[0m";
 
 fi
 done
 
-echo -e "\e[1;34m[*] \e[32mZsh-autosuggestion plugins setup..\e[0m";
+echo -e "\e[1;34m[*] \e[32mZsh-Configuración de plugins de autosugerencia..\e[0m";
 
 zshau=0
 (rm -rf ~/.plugins) &> /dev/null
@@ -278,7 +278,7 @@ then
 
 else
 
-echo -e "\e[1;34m[*] \e[32mdownload fail..i ll try again..\e[0m";
+echo -e "\e[1;34m[*] \e[32mError de descarga..i ll Vuelve a intentarlo..\e[0m";
 
 fi
 done
@@ -294,7 +294,7 @@ echo -e "\e[1;34m[*] \e[32mZsh-syntax-highlighter setup....\e[0m";
 if [ -d $HOME/.plugins/zsh-syntax-highlighting ];then
 	zshsyx=1
 else
-	echo -e "\e[1;34m[*] \e[32mdownload fail..i ll try again..\e[0m";
+	echo -e "\e[1;34m[*] \e[32mError de descarga..i ll Vuelve a intentarlo..\e[0m";
 
 fi
 done
@@ -306,7 +306,7 @@ done
 	
 	
 else
-	echo -e "\e[1;34m[*] \033[32mHope you like my work..\033[0m"
+	echo -e "\e[1;34m[*] \033[32mEspero que te guste mi trabajo..\033[0m"
 	exit
 fi
 exit 0
