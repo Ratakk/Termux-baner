@@ -1,4 +1,4 @@
-newName = input("[+] enter the new name : ")
+newName = input("[+] Introduzca el nuevo nombre : ")
 newName = '"'+newName+'"'
 file  = open('/data/data/com.termux/files/home/.zshrc','r')
 allLines = []
@@ -13,4 +13,4 @@ file.close()
 file = open('/data/data/com.termux/files/home/.zshrc','w')
 file.writelines(allLines)
 file.close()
-print("Updated sucessfully restart to see changes")
+print("Se actualizó el reinicio exitoso para ver los cambios")
