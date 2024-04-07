@@ -24,7 +24,7 @@ done
 done
 printf "   \b\b\b\b\b"
 tput cnorm
-printf "\e[1;33m [Done]\e[0m";
+printf "\e[1;33m [Listo]\e[0m";
 echo "";
 
 }
@@ -73,7 +73,7 @@ fi
 }
 # note this is only print 7 charecters
 echo "";
-echo -e "\e[1;34m[*] \e[32mInstalar paquetes....\e[0m";
+echo -e "\e[1;34m[*] \e[32mInstalando paquetes....\e[0m";
 echo "";
 (apt update -y && apt upgrade -y) &> /dev/null;
 apt install figlet pv ncurses-utils binutils coreutils wget git zsh termux-api procps gawk termux-tools -y &> /dev/null;
@@ -94,7 +94,7 @@ THEADER ()
 {
 clear;
 echo -e "\033[01;32m
-Beto (2020)
+Beto (2024)
 		
 	menu
 +---------------------------*/
@@ -110,14 +110,14 @@ tput setaf 3
 read -p "Porfavor, el nombre: " PROC
 tput sgr 0
 if [[ ${#PROC} -gt 8 ]]; then
-	echo -e "\e[1;34m[*] \033[32mToo tiene largos caracteres...\033[0m"
+	echo -e "\e[1;34m[*] \033[32mTiene largos caracteres...\033[0m"
 	echo ""
-	echo -e "\033[32mPlz Introduzca menos de \033[33m9 \033[32mcharacters Nombre\033[0m" | pv -qL 10;
+	echo -e "\033[32mPorfa introduzca menos de \033[33m9 \033[32caracteres de nombre\033[0m" | pv -qL 10;
 	echo ""
 	sleep 4
 	clear
 echo -e "\033[01;32m
-Beto (2020)
+Beto (2024)
 
 	menu
 +---------------------------*/
@@ -175,7 +175,7 @@ TNAME="$PROC"
 setopt prompt_subst
 
 PROMPT=$'
-%{\e[0;31m%}┌─[%{\e[1;34m%}%B%{\${TNAME}%}%{\e[1;33m%}@%{\e[1;36m%}termux%b%{\e[0;31m%}]─[%{\e[0;32m%}%(4~|/%2~|%~)%{\e[0;31m%}]%b
+%{\e[0;31m%}┌─[%{\e[1;34m%}%B%{\${TNAME}%}%{\e[1;33m%}@%{\e[1;36m%}Micha%b%{\e[0;31m%}]─[%{\e[0;32m%}%(4~|/%2~|%~)%{\e[0;31m%}]%b
 %{\e[0;31m%}└──╼ %{\e[1;31m%}%B❯%{\e[1;34m%}❯%{\e[1;90m%}❯%{\e[0m%}%b '
 
 ## Replace 'ls' with 'exa' (if available) + some aliases.
@@ -216,7 +216,7 @@ exit
 }
 
 clear;
-echo -e "\033[31m$(figlet -f Remo773 "T-Header")\e[0m"
+echo -e "\033[31m$(figlet -f Remo773 "Baner")\e[0m"
 echo -e "\e[1;32m
 +----------------------------------*/
 Beto : (\e[33m14.4.2021\e[32m)
@@ -224,7 +224,7 @@ Beto : (\e[33m14.4.2021\e[32m)
 1. Oh-my-zsh
 2. Zsh-syntax-highlight (\e[33mplugins\e[01;32m)
 3. Zsh-command-autosuggest (\e[33mplugins\e[01;32m)
-4. Terminal-Header
+4. Terminal-baner
 5. Custom PS1 prompt ( \e[33mBest one\e[1;32m )
 +----------------------------------*/
 \033[0m";
@@ -242,11 +242,11 @@ if [ -d $HOME/.oh-my-zsh ]; then
 elif [ -d $HOME/.zsh ]; then
 	(rm -rf $HOME/.zsh) &> /dev/null
 else
-	echo -e "\e[1;34m[*] \e[32mYou hvnt oh-my-zsh...\e[0m";
+	echo -e "\e[1;34m[*] \e[32mNo tienes oh-my-zsh...\e[0m";
 fi
 while [ $ozsh = 0 ];
 do
-	echo -e "\e[1;34m[*] \e[32mOh-my-zsh new setup....\e[0m";
+	echo -e "\e[1;34m[*] \e[32mOh-my-zsh nuevo setup....\e[0m";
 	echo "";
 
 	( rm -rf ~/.zshrc;git clone https://github.com/ohmyzsh/ohmyzsh.git $HOME/.oh-my-zsh;cp "$HOME/.oh-my-zsh/templates/zshrc.zsh-template" "$HOME/.zshrc";termux-wake-unlock; ) &> /dev/null & spin;
@@ -288,7 +288,7 @@ zshsyx=0
 
 while [ $zshsyx = 0 ];
 do
-echo -e "\e[1;34m[*] \e[32mZsh-syntax-highlighter setup....\e[0m";
+echo -e "\e[1;34m[*] \e[32mZsh-Configuración del resaltador de sintaxis....\e[0m";
 	( git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.plugins/zsh-syntax-highlighting; echo "source ~/.plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> $HOME/.zshrc; ) &> /dev/null & spin
 
 if [ -d $HOME/.plugins/zsh-syntax-highlighting ];then
